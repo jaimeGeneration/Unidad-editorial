@@ -1,0 +1,127 @@
+/*Variables*/
+
+/*Colors*/
+$blue: #0099cc;
+$blue-light:  #66d9ff;
+$grey: #333;
+$dark: #000;
+$white: #fff;
+
+/*Sizes*/
+$small: 12px;
+$medium: 16px;
+$large: 24px;
+
+body {
+  font-family: Helvetica;
+}
+
+.c-hero {
+  
+    &__title {
+    font-size: $large;
+    color: $grey;
+    &--dark {
+      color: $dark;
+      font-weight: bold;
+    }
+  }
+  
+  &__container {
+    display:flex;
+    position: relative;
+    width:100%;
+    $self: &;
+    align-items: center;
+    
+   &--reverse {
+    flex-direction: row-reverse;
+    justify-content:  flex-end;
+  }
+  &--vertical {
+    flex-direction: column;
+    
+    #{ $self }__img{
+      height: 150px;
+      width: 100%;
+    } 
+  }
+  &--over {
+    height: 300px;
+    
+    #{ $self }__text {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+     
+     #{ $self }__img {
+      position: absolute;
+      height: inherit;
+      width: 100%;
+    }
+  }
+  &--center {
+    justify-content: center;
+    
+    #{ $self }__text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 68%;
+      width: auto;
+    }
+  }
+  
+  &__img{
+       
+       img{
+          width: 100%;
+          height: inherit;
+          }
+        }
+  
+  &__text {
+    padding: 0 15px 15px 15px;
+    width: 13%;
+    font-size: $medium;
+   
+   &__cta{
+      background: $blue;
+      width: auto;
+      color: #fff;
+      font-size: $small;
+      cursor: pointer;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 3px;
+      
+      &:hover{
+        background: $blue-light;
+      }
+    }
+    
+    &__play{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: $blue;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      cursor: pointer;
+       
+       &:hover{
+           background: $blue-light;
+       }
+      &__button{
+        border-style: solid;
+        border-width: 10px 0 10px 25px;
+        border-color: transparent transparent transparent $white;
+        margin: 0 auto;
+        }
+      }
+    }
+  }
+}

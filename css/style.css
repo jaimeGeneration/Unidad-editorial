@@ -1,0 +1,80 @@
+/*Variables*/
+/*Colors*/
+/*Sizes*/
+body {
+  font-family: Helvetica; }
+
+.c-hero__title {
+  font-size: 24px;
+  color: #333; }
+  .c-hero__title--dark {
+    color: #000;
+    font-weight: bold; }
+.c-hero__container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center; }
+  .c-hero__container--reverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end; }
+  .c-hero__container--vertical {
+    flex-direction: column; }
+    .c-hero__container--vertical .c-hero__container__img {
+      height: 150px;
+      width: 100%; }
+  .c-hero__container--over {
+    height: 300px; }
+    .c-hero__container--over .c-hero__container__text {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%); }
+    .c-hero__container--over .c-hero__container__img {
+      position: absolute;
+      height: inherit;
+      width: 100%; }
+  .c-hero__container--center {
+    justify-content: center; }
+    .c-hero__container--center .c-hero__container__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      top: 68%;
+      width: auto; }
+  .c-hero__container__img img {
+    width: 100%;
+    height: inherit; }
+  .c-hero__container__text {
+    padding: 0 15px 15px 15px;
+    width: 13%;
+    font-size: 16px; }
+    .c-hero__container__text__cta {
+      background: #0099cc;
+      width: auto;
+      color: #fff;
+      font-size: 12px;
+      cursor: pointer;
+      border: none;
+      padding: 5px 15px;
+      border-radius: 3px; }
+      .c-hero__container__text__cta:hover {
+        background: #66d9ff; }
+    .c-hero__container__text__play {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #0099cc;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      cursor: pointer; }
+      .c-hero__container__text__play:hover {
+        background: #66d9ff; }
+      .c-hero__container__text__play__button {
+        border-style: solid;
+        border-width: 10px 0 10px 25px;
+        border-color: transparent transparent transparent #fff;
+        margin: 0 auto; }
+
+/*# sourceMappingURL=style.css.map */
